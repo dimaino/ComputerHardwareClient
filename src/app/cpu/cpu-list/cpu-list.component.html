@@ -10,9 +10,14 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>Owner name</th>
-            <th>Owner address</th>
-            <th>Date of birth</th>
+            <th>CPU Id</th>
+            <th>Name</th>
+            <th>Core Count</th>
+            <th>Thread Count</th>
+            <th>L3 Cache</th>
+            <th>Max Frequency</th>
+            <th>Base Frequency</th>
+            <th>TDP</th>
             <th>Details</th>
             <th>Update</th>
             <th>Delete</th>
@@ -20,8 +25,14 @@
         </thead>
         <tbody>
           <tr *ngFor="let cpu of cpus">
-            <td>{{owner.CPUId}}</td>
-            <td>{{owner.Name}}</td>
+            <td>{{cpu.CPUId}}</td>
+            <td>{{cpu.Name}}</td>
+            <td>{{cpu.CoreCount}}</td>
+            <td>{{cpu.ThreadCount}}</td>
+            <td>{{cpu.L3Cache}}</td>
+            <td>{{cpu.MaxFrequency}}</td>
+            <td>{{cpu.BaseFrequency}}</td>
+            <td>{{cpu.TDP}}</td>
             <td><button type="button" id="details" class="btn btn-default">Details</button></td>
             <td><button type="button" id="update" class="btn btn-success">Update</button></td>
             <td><button type="button" id="delete" class="btn btn-danger">Delete</button></td>
