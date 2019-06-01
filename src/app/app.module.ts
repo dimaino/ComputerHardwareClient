@@ -9,13 +9,21 @@ import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 import { EnvironmentUrlService } from './shared/services/environment-url.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from 'selenium-webdriver/http';
+import { RepositoryService } from './shared/services/repository.service';
+import { from } from 'rxjs';
+import { SocketComponent } from './socket/socket.component';
+import { ChipsetComponent } from './chipset/chipset.component';
+import { ManufacturerComponent } from './manufacturer/manufacturer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MenuComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SocketComponent,
+    ChipsetComponent,
+    ManufacturerComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +31,8 @@ import { HttpClient } from 'selenium-webdriver/http';
     AppRoutingModule
   ],
   providers: [
-    EnvironmentUrlService
+    EnvironmentUrlService,
+    RepositoryService
   ],
   bootstrap: [AppComponent]
 })
